@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.kileyowen.idhack16.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Send SMS"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:measureWithLargestChild="true">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the phone number of recipient"
+            />
+        <EditText
+            android:id="@+id/txtPhoneNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            />
+        <EditText
+            android:id="@+id/txtMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="150px"
+            android:gravity="top"
+            />
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send SMS"
+            />
+    </LinearLayout>
+</LinearLayout>
